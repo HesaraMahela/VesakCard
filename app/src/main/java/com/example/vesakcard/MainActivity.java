@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private MediaPlayer mediaPlayer;
@@ -56,9 +57,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         if (mediaPlayer.isPlaying()){
             mediaPlayer.pause();
+            Toast.makeText(MainActivity.this, "song is paused", Toast.LENGTH_SHORT).show();
 
         }else{
             mediaPlayer.start();
+            Toast.makeText(MainActivity.this, "song is playing", Toast.LENGTH_SHORT).show();
         }
     }
     @Override

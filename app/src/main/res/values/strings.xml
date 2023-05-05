@@ -13,7 +13,8 @@
     <string name="greeting">HAPPY VESAK TO YOU</string>
     <string name="to">To: You </string>
     <string name="from">From: Hesara Mahela </string>
-    <string name="poem">Pouring out the golden glow the full moon of Vesak \n  trying to melt in the blooming sky\n Given the courtesy of trees breeze</string>
+    <string name="poem">වෙසක් ඔන්න \n පතක් මෙන්න \n මතක් වෙන්න \n තියා ගන්න</string>
+
     <string name="todo">TODO</string>
 
 </resources>

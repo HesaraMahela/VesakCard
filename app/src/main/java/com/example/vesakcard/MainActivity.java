@@ -3,6 +3,7 @@ package com.example.vesakcard;
 import android.arch.lifecycle.Lifecycle;
 import android.arch.lifecycle.OnLifecycleEvent;
 import android.content.Intent;
+import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.support.v4.view.MotionEventCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -57,19 +58,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         if (mediaPlayer.isPlaying()){
             mediaPlayer.pause();
+
             Toast.makeText(MainActivity.this, "song is paused", Toast.LENGTH_SHORT).show();
-            soundbtn.setBackgroundResource(R.drawable._359138);
+            soundbtn.setBackgroundColor(Color.parseColor("#3863B8"));
+
+
 
         }else{
+
             mediaPlayer.start();
             Toast.makeText(MainActivity.this, "song is playing", Toast.LENGTH_SHORT).show();
             soundbtn.setBackgroundResource(R.drawable.volume);
+
         }
+        soundbtn.setBackgroundResource(R.drawable._359138);
     }
     @Override
     protected void onStart() {
         super.onStart();
-        mediaPlayer.start();
+        if (mediaPlayer.getCurrentPosition() == 0){
+            mediaPlayer.start();
+            Log.d("fffff","started ");
+        }
     }
 
     @Override

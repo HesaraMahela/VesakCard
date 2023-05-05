@@ -58,10 +58,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (mediaPlayer.isPlaying()){
             mediaPlayer.pause();
             Toast.makeText(MainActivity.this, "song is paused", Toast.LENGTH_SHORT).show();
+            soundbtn.setBackgroundResource(R.drawable._359138);
 
         }else{
             mediaPlayer.start();
             Toast.makeText(MainActivity.this, "song is playing", Toast.LENGTH_SHORT).show();
+            soundbtn.setBackgroundResource(R.drawable.volume);
         }
     }
     @Override

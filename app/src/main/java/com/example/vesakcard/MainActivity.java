@@ -44,6 +44,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         soundbtn =(ImageButton) findViewById(R.id.soundbutton);
         soundbtn.setOnClickListener(this);
 
+
+        // hide activity bar
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
     }
 
 

@@ -9,5 +9,9 @@ public class greeting_page extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_greeting_page);
+
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
     }
 }

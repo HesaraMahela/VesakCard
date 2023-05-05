@@ -1,13 +1,23 @@
 package com.example.vesakcard;
 
+import android.arch.lifecycle.Lifecycle;
+import android.arch.lifecycle.OnLifecycleEvent;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.v4.view.MotionEventCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.ImageButton;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    private MediaPlayer mediaPlayer;
+    private ImageButton soundbtn;
+
+
+
 
     @Override
     public boolean onTouchEvent(MotionEvent event){
@@ -23,11 +33,39 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        mediaPlayer = MediaPlayer.create(this, R.raw.song2);
+        soundbtn =(ImageButton) findViewById(R.id.soundbutton);
+        soundbtn.setOnClickListener(this);
 
+    }
+
+
+    @Override
+    public void onClick(View v) {
+        if (mediaPlayer.isPlaying()){
+            mediaPlayer.pause();
+
+        }else{
+            mediaPlayer.start();
+        }
+    }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        mediaPlayer.start();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mediaPlayer.pause();
+        mediaPlayer.release();
     }
 }

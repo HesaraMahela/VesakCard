@@ -2,10 +2,9 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/secondpage"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".secondPage">
+    tools:context=".greeting_page">
 
     <ImageView
         android:id="@+id/imageView2"
@@ -20,7 +19,10 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/istockphoto_959104114_612x612"
-        android:contentDescription="TODO" />
+        android:contentDescription="@string/todo" />
+
+
+
 
     <TextView
         android:id="@+id/headingTxt"
@@ -28,7 +30,7 @@
         android:layout_width="wrap_content"
         android:layout_height="37dp"
         android:backgroundTintMode="multiply"
-        android:fontFamily="@font/akaya_telivigala"
+        android:fontFamily="sans-serif"
         android:foregroundGravity="center_vertical|center"
         android:text="@string/greeting"
         android:textSize="24sp"
@@ -43,7 +45,7 @@
         android:id="@+id/fromTxt"
         android:layout_width="wrap_content"
         android:layout_height="29dp"
-        android:fontFamily="@font/amarante"
+        android:fontFamily="sans-serif-black"
         android:includeFontPadding="true"
         android:text="@string/from"
         android:textSize="24sp"
@@ -52,13 +54,13 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.61" />
+        app:layout_constraintVertical_bias="0.65" />
 
     <TextView
         android:id="@+id/toTxt"
         android:layout_width="wrap_content"
         android:layout_height="38dp"
-        android:fontFamily="@font/amarante"
+        android:fontFamily="sans-serif-black"
         android:text="@string/to"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -66,7 +68,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/fromTxt"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.69" />
+        app:layout_constraintVertical_bias="0.72" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline"
@@ -77,20 +79,17 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="335dp"
-        android:layout_height="245dp"
-        android:fontFamily="@font/amarante"
-        android:lineSpacingMultiplier="1.2"
-        android:lines="8"
-        android:maxLines="8"
-        android:padding="@android:dimen/dialog_min_width_major"
-        android:text="TextView"
-        android:textSize="20sp"
+        android:layout_width="295dp"
+        android:layout_height="198dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/poem"
+        android:textColor="#616161"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.62"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.308"
-        tools:text="@string/poem" />
+        app:layout_constraintVertical_bias="0.337" />
+
 
 </android.support.constraint.ConstraintLayout>
